@@ -1,0 +1,30 @@
+<?php
+$this->headtitle("Product");
+?>
+<div class="wrapper">
+
+<?php foreach ($category as $cat):?>
+	<h1><?php echo $cat['name'];?></h1>
+	<p><?php echo $cat['description'];?></p>
+
+	<div class="jcarousel-wrapper">
+		<div class="jcarousel">
+			<ul>
+			<?php foreach ($cat['products'] as $pro):?>
+				<li><img
+					src="<?php echo $this->basepath ().'/img/jcarousel_t/'.$pro['img']?>" alt="">
+					<p>Name: <?php echo $pro['name'];?></p>
+					<p>Description: <?php echo $pro['description'];?></p>
+					<p>Price: <?php echo $pro['price'];?></p>
+				</li>
+			<?php endforeach;?>
+			</ul>
+		</div>
+
+		<a href="#" class="jcarousel-control-prev">&lsaquo;</a> <a href="#"
+			class="jcarousel-control-next">&rsaquo;</a>
+
+		<p class="jcarousel-pagination"></p>
+	</div>
+<?php endforeach;?>
+</div>
