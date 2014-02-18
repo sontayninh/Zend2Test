@@ -17,7 +17,7 @@ use Zend\Stdlib\ArrayObject;
  * Replaces the $_SESSION superglobal with an ArrayObject that allows for
  * property access, metadata storage, locking, and immutability.
  */
-class SessionStorage extends ArrayStorage
+abstract class SessionStorage extends ArrayStorage
 {
     /**
      * Constructor
@@ -101,4 +101,52 @@ class SessionStorage extends ArrayStorage
     {
         return (isset($this['_IMMUTABLE']) && $this['_IMMUTABLE']);
     }
+	/* (non-PHPdoc)
+	 * @see ArrayAccess::offsetExists()
+	 */
+	public function offsetExists($offset) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	/* (non-PHPdoc)
+	 * @see ArrayAccess::offsetGet()
+	 */
+	public function offsetGet($offset) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	/* (non-PHPdoc)
+	 * @see ArrayAccess::offsetUnset()
+	 */
+	public function offsetUnset($offset) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	/* (non-PHPdoc)
+	 * @see Serializable::serialize()
+	 */
+	public function serialize() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	/* (non-PHPdoc)
+	 * @see Serializable::unserialize()
+	 */
+	public function unserialize($serialized) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	/* (non-PHPdoc)
+	 * @see Countable::count()
+	 */
+	public function count() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

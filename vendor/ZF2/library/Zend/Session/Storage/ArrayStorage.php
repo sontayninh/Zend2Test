@@ -18,7 +18,7 @@ use Zend\Session\Exception;
  * Defines an ArrayObject interface for accessing session storage, with options
  * for setting metadata, locking, and marking as isImmutable.
  */
-class ArrayStorage extends ArrayObject implements StorageInterface
+abstract class ArrayStorage extends ArrayObject implements StorageInterface
 {
     /**
      * Is storage marked isImmutable?
@@ -357,4 +357,52 @@ class ArrayStorage extends ArrayObject implements StorageInterface
 
         return $values;
     }
+	/* (non-PHPdoc)
+	 * @see ArrayAccess::offsetExists()
+	 */
+	public function offsetExists($offset) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	/* (non-PHPdoc)
+	 * @see ArrayAccess::offsetGet()
+	 */
+	public function offsetGet($offset) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	/* (non-PHPdoc)
+	 * @see ArrayAccess::offsetUnset()
+	 */
+	public function offsetUnset($offset) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	/* (non-PHPdoc)
+	 * @see Serializable::serialize()
+	 */
+	public function serialize() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	/* (non-PHPdoc)
+	 * @see Serializable::unserialize()
+	 */
+	public function unserialize($serialized) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	/* (non-PHPdoc)
+	 * @see Countable::count()
+	 */
+	public function count() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
