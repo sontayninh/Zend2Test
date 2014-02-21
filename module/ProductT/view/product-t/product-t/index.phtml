@@ -1,22 +1,30 @@
 <?php
-$this->headtitle("Product");
+$this->headtitle ( "Product" );
 ?>
+
+<script>
+	dojo.require("dijit.form.Button");
+	dojo.require("dijit.Dialog");
+// 	dojo.require("dijit.layout.TabContainer");
+// 	dojo.require("dijit.layout.ContentPane");
+</script>
+
 <div class="wrapper">
 
-<?php foreach ($category as $cat):?>
+<?php foreach ($categories as $cat):?>
 	<h1><?php echo $cat['name'];?></h1>
 	<p><?php echo $cat['description'];?></p>
 
 	<div class="jcarousel-wrapper">
 		<div class="jcarousel">
 			<ul>
-			<?php foreach ($cat['products'] as $pro):?>
+			<?php foreach ($cat['_embedded']['products'] as $pro):?>
 				<li><img
-					src="<?php echo $this->basepath ().'/img/jcarousel_t/'.$pro['img']?>" alt="">
+					src="<?php echo $this->basepath ().'/img/jcarousel_t/'.$pro['img']?>"
+					alt="" onclick="getProductDialog(<?php echo $pro['id']?>)">
 					<p>Name: <?php echo $pro['name'];?></p>
 					<p>Description: <?php echo $pro['description'];?></p>
-					<p>Price: <?php echo $pro['price'];?></p>
-				</li>
+					<p>Price: <?php echo $pro['price'];?></p></li>
 			<?php endforeach;?>
 			</ul>
 		</div>
@@ -27,4 +35,44 @@ $this->headtitle("Product");
 		<p class="jcarousel-pagination"></p>
 	</div>
 <?php endforeach;?>
-</div>
+
+
+<script>
+	function getProductDialog(id){
+		dojo.xhrGet({
+			url:"<?php echo $this->basepath();?>/productt/getdata",
+			handleAs: "json",
+			content:{
+				idProduct:id
+				},
+			load: function(result){
+				var product = result.product;
+				dojo.setAttr("dialogProduct", "title", "aaaaaaaaaaaaaaaaa");
+				dojo.byId("dialogProduct").title = "Product "+product.id;
+				dojo.byId("img_pro").src = "<?php echo $this->basepath ()?>/img/jcarousel_t/"+product.img;
+				dojo.byId("id_pro").innerHTML = "ID: "+product.id;
+				dojo.byId("name_pro").innerHTML = "Name: "+product.name;
+				dojo.byId("description_pro").innerHTML = "Description: "+product.description;
+				dojo.byId("price_pro").innerHTML = "Price: "+product.price;
+			},
+			error: function(){
+				
+			},
+			preventCache: true
+		});
+		dijit.byId("dialogProduct").show();
+	}
+	dojo.ready(function(){
+		
+	});
+</script>
+
+
+	<div id="dialogProduct" data-dojo-type="dijit.Dialog" title="Product">
+		<li>
+			<img id="img_pro" alt="" src="">
+			<p id="id_pro"></p>
+			<p id="name_pro"></p>
+			<p id="description_pro"></p>
+			<p id="price_pro"></p></li>
+	</div>

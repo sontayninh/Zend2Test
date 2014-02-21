@@ -15,26 +15,28 @@
                         ->prependStylesheet($this->basePath() . '/css/style.css')
                         ->prependStylesheet($this->basePath() . '/css/bootstrap-theme.min.css')
                         ->prependStylesheet($this->basePath() . '/css/bootstrap.min.css')
+                        ->prependStylesheet($this->basepath() . '/css/jcarousel_t/jcarousel.css')
+                        ->prependStylesheet($this->basepath() . '/js/dojo_t/dijit/themes/claro/claro.css')
+//                         ->prependStylesheet($this->basepath() . '/js/jquery_t/smoothness/jquery-ui.css')
          ?>
+         
+         <script>dojoConfig = {parseOnLoad: true}</script>
 
         <!-- Scripts -->
         <?php echo $this->headScript()
+            ->prependFile($this->basepath() . '/js/jcarousel_t/jquery.jcarousel.min.js')
+            ->prependFile($this->basepath() . '/js/jcarousel_t/jcarousel.js')
+            ->prependFile($this->basepath() .'/js/jcarousel_t/jcarousel.config.js')
+            ->prependFile($this->basepath() . '/js/dojo_t/dojo/dojo.js' )
+//             ->prependFile($this->basePath() . '/js/jquery_t/jquery-ui.js')
             ->prependFile($this->basePath() . '/js/bootstrap.min.js')
             ->prependFile($this->basePath() . '/js/jquery.min.js')
             ->prependFile($this->basePath() . '/js/respond.min.js', 'text/javascript', array('conditional' => 'lt IE 9',))
             ->prependFile($this->basePath() . '/js/html5shiv.js',   'text/javascript', array('conditional' => 'lt IE 9',))
-        ; ?>
-        
-        <!--  Jcarousel-->
-        <?php
-        echo $this->headscript ()->prependFile ( $this->basepath () . '/js/jcarousel_t/jquery.jcarousel.min.js' );
-        echo $this->headscript ()->prependFile ( $this->basepath () . '/js/jcarousel_t/jcarousel.js' );
-        echo $this->headscript ()->prependFile ( $this->basepath () . '/js/jcarousel_t/jcarousel.config.js' );
-        echo $this->headlink ()->prependStylesheet ( $this->basepath () . '/css/jcarousel_t/jcarousel.css' );
         ?>
-
+        
     </head>
-    <body>
+    <body class="claro">
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container">
                 <div class="navbar-header">
