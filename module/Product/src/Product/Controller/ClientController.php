@@ -21,18 +21,19 @@ class ClientController extends AbstractActionController {
 		$client = new HttpClient();
 		$client->setAdapter('Zend\Http\Client\Adapter\Curl');
 		//var_dump($client) ;
-		$method = $this->params()->fromQuery('method', 'getlist');
+		$method = $this->params()->fromQuery('method', 'get');
 		$table = $this->params()->fromQuery('table','get');
-		if (strpos($table, "category")!==false) {
+		if ($table=='category') {
 			$client->setUri('http://localhost:80'.$this->getRequest()->getBaseUrl().'/category');
 		} 
-		elseif (strpos($table, "product")!==false)
+		elseif ($table=='product')
 		{
 			$client->setUri('http://localhost:80'.$this->getRequest()->getBaseUrl().'/product');
 		}
-		var_dump( $table);
-		var_dump( $method);
-		/*echo '<pre>';
+		/*var_dump( $table);
+		var_dump( $method);*/
+		/*echo '<pre>';.
+		 * 
 		print_r($client->getUri());
 		echo '</pre>' ;*/
 		// var_dump($this->getRequest()->getBaseUrl());
@@ -41,8 +42,9 @@ class ClientController extends AbstractActionController {
 			case 'get' :
 				
 				$client->setMethod('GET');
-				$client->setParameterGET(array('id'=>3));
-				//var_dump($client);
+				$id=$this->params()->fromQuery('id','get');
+				$client->setParameterGET(array('id'=>$id));
+				
 				break;
 			case 'getlist' :
 
@@ -99,14 +101,12 @@ class ClientController extends AbstractActionController {
 			 
 			$response = $this->getResponse();
 			$response->setContent($message);
-			echo "fail";
 			return $response;
 		}
 		$body = $response->getBody();
 		 
 		$response = $this->getResponse();
 		$response->setContent($body);
-		echo "Success";
 		return $response;
 	}
 }

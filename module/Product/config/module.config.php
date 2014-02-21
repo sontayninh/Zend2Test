@@ -75,7 +75,7 @@ return array (
 						'client' => array(
 								'type'    => 'segment',
 								'options' => array(
-										'route'    => '/client[/:table][/:action]',//
+										'route'    => '/client[/:table][/:action][/:id]',//
 										'defaults' => array(
 												'controller' => 'Product\Controller\Client',
 												'action'     => 'index'
