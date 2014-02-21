@@ -30,8 +30,8 @@ class ClientController extends AbstractActionController {
 		{
 			$client->setUri('http://localhost:80'.$this->getRequest()->getBaseUrl().'/product');
 		}
-		/*var_dump( $table);
-		var_dump( $method);*/
+		//var_dump( $table);
+		//var_dump( $method);
 		/*echo '<pre>';.
 		 * 
 		print_r($client->getUri());

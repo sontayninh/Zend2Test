@@ -18,7 +18,7 @@ $this->headtitle ( "Product" );
 	<div class="jcarousel-wrapper">
 		<div class="jcarousel">
 			<ul>
-			<?php foreach ($cat['_embedded']['products'] as $pro):?>
+			<?php foreach ($cat['products'] as $pro):?>
 				<li><img
 					src="<?php echo $this->basepath ().'/img/jcarousel_t/'.$pro['img']?>"
 					alt="" onclick="getProductDialog(<?php echo $pro['id']?>)">
@@ -40,13 +40,13 @@ $this->headtitle ( "Product" );
 <script>
 	function getProductDialog(id){
 		dojo.xhrGet({
-			url:"<?php echo $this->basepath();?>/productt/getdata",
+			url:"<?php echo $this->basepath();?>/product/"+id,
 			handleAs: "json",
-			content:{
-				idProduct:id
-				},
+// 			content:{
+// 				idProduct:id
+// 				},
 			load: function(result){
-				var product = result.product;
+				var product = result[0];
 				dojo.setAttr("dialogProduct", "title", "aaaaaaaaaaaaaaaaa");
 				dojo.byId("dialogProduct").title = "Product "+product.id;
 				dojo.byId("img_pro").src = "<?php echo $this->basepath ()?>/img/jcarousel_t/"+product.img;
@@ -58,7 +58,7 @@ $this->headtitle ( "Product" );
 			error: function(){
 				
 			},
-			preventCache: true
+// 			preventCache: true
 		});
 		dijit.byId("dialogProduct").show();
 	}

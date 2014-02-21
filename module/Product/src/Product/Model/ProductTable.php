@@ -3,7 +3,7 @@
 namespace Product\Model;
 
 use Zend\Db\TableGateway\TableGateway;
-
+use Zend\Db\Sql\Select;
 class ProductTable {
 	protected $tableGateway;
 	public function __construct(TableGateway $tableGateway) {
@@ -11,6 +11,11 @@ class ProductTable {
 	}
 	public function fetchAll() {
 		$resultSet = $this->tableGateway->select ();
+		return $resultSet;
+	}
+	public function fetchProductByCaterogy($id_cat){
+		$id_category=(int)$id_cat;
+		$resultSet=$this->tableGateway->select(array('category_id'=>$id_category));
 		return $resultSet;
 	}
 	public function getProduct($id) {
@@ -29,4 +34,5 @@ class ProductTable {
 	public function deleteProductCategory($id) {
 		// code here
 	}
+	
 }
