@@ -1,0 +1,169 @@
+{
+"category":[
+	{
+		"id":1,
+		"name":"car",
+		"description":"Super Car",
+		"products":[
+			{
+				"id":1,
+				"category_id":1,
+				"name":"Lamborghini Aventador",
+				"price":600000,
+				"description":"Fantasy Car",
+				"img":"lamborghini.jpg"
+			},
+			{
+				"id":1,
+				"category_id":1,
+				"name":"Lamborghini Aventador",
+				"price":600000,
+				"description":"Fantasy Car",
+				"img":"lamborghini.jpg"
+			},
+			{
+				"id":1,
+				"category_id":1,
+				"name":"Lamborghini Aventador",
+				"price":600000,
+				"description":"Fantasy Car",
+				"img":"lamborghini.jpg"
+			},
+			{
+				"id":1,
+				"category_id":1,
+				"name":"Lamborghini Aventador",
+				"price":600000,
+				"description":"Fantasy Car",
+				"img":"lamborghini.jpg"
+			},
+			{
+				"id":1,
+				"category_id":1,
+				"name":"Lamborghini Aventador",
+				"price":600000,
+				"description":"Fantasy Car",
+				"img":"lamborghini.jpg"
+			},
+			{
+				"id":1,
+				"category_id":1,
+				"name":"Lamborghini Aventador",
+				"price":600000,
+				"description":"Fantasy Car",
+				"img":"lamborghini.jpg"
+			}
+		]
+	},
+	{
+		"id":2,
+		"name":"motor",
+		"description":"Motor City",
+		"products":[
+			{
+				"id":2,
+				"category_id":2,
+				"name":"Honda CBR 150",
+				"price":5000,
+				"description":"Sport City",
+				"img":"cbr150.jpg"
+			},
+			{
+				"id":2,
+				"category_id":2,
+				"name":"Honda CBR 150",
+				"price":5000,
+				"description":"Sport City",
+				"img":"cbr150.jpg"
+			},
+			{
+				"id":2,
+				"category_id":2,
+				"name":"Honda CBR 150",
+				"price":5000,
+				"description":"Sport City",
+				"img":"cbr150.jpg"
+			},
+			{
+				"id":2,
+				"category_id":2,
+				"name":"Honda CBR 150",
+				"price":5000,
+				"description":"Sport City",
+				"img":"cbr150.jpg"
+			},
+			{
+				"id":2,
+				"category_id":2,
+				"name":"Honda CBR 150",
+				"price":5000,
+				"description":"Sport City",
+				"img":"cbr150.jpg"
+			},
+			{
+				"id":2,
+				"category_id":2,
+				"name":"Honda CBR 150",
+				"price":5000,
+				"description":"Sport City",
+				"img":"cbr150.jpg"
+			}
+		]
+	},
+	{
+		"id":3,
+		"name":"candy",
+		"description":"Candy crush",
+		"products":[
+			{
+				"id":3,
+				"category_id":3,
+				"name":"Jelly Bean",
+				"price":1,
+				"description":"Yummy",
+				"img":"jellybean.jpg"
+			},
+			{
+				"id":3,
+				"category_id":3,
+				"name":"Jelly Bean",
+				"price":1,
+				"description":"Yummy",
+				"img":"jellybean.jpg"
+			},
+			{
+				"id":3,
+				"category_id":3,
+				"name":"Jelly Bean",
+				"price":1,
+				"description":"Yummy",
+				"img":"jellybean.jpg"
+			},
+			{
+				"id":3,
+				"category_id":3,
+				"name":"Jelly Bean",
+				"price":1,
+				"description":"Yummy",
+				"img":"jellybean.jpg"
+			},
+			{
+				"id":3,
+				"category_id":3,
+				"name":"Jelly Bean",
+				"price":1,
+				"description":"Yummy",
+				"img":"jellybean.jpg"
+			},
+			{
+				"id":3,
+				"category_id":3,
+				"name":"Jelly Bean",
+				"price":1,
+				"description":"Yummy",
+				"img":"jellybean.jpg"
+			}
+		]
+	}
+]
+}

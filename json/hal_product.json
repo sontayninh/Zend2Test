@@ -1,0 +1,262 @@
+{
+	"categories" : [
+		{
+			"_links" : {
+				"self" : {
+					"href" : ""
+				}
+			},
+			"id" : 1,
+			"name" : "car",
+			"description" : "Super Car",
+			"_embedded" : {
+				"products" : [
+					{
+						"_links" : {
+							"self" : {
+								"href" : ""
+							}
+						},
+						"id" : 1,
+						"name" : "Lamborghini Aventador",
+						"price" : 600000,
+						"description" : "Fantasy Car",
+						"img" : "lamborghini.jpg"
+					},
+					{
+						"_links" : {
+							"self" : {
+								"href" : ""
+							}
+						},
+						"id" : 1,
+						"name" : "Lamborghini Aventador",
+						"price" : 600000,
+						"description" : "Fantasy Car",
+						"img" : "lamborghini.jpg"
+					},
+					{
+						"_links" : {
+							"self" : {
+								"href" : ""
+							}
+						},
+						"id" : 1,
+						"name" : "Lamborghini Aventador",
+						"price" : 600000,
+						"description" : "Fantasy Car",
+						"img" : "lamborghini.jpg"
+					},
+					{
+						"_links" : {
+							"self" : {
+								"href" : ""
+							}
+						},
+						"id" : 1,
+						"name" : "Lamborghini Aventador",
+						"price" : 600000,
+						"description" : "Fantasy Car",
+						"img" : "lamborghini.jpg"
+					},
+					{
+						"_links" : {
+							"self" : {
+								"href" : ""
+							}
+						},
+						"id" : 1,
+						"name" : "Lamborghini Aventador",
+						"price" : 600000,
+						"description" : "Fantasy Car",
+						"img" : "lamborghini.jpg"
+					},
+					{
+						"_links" : {
+							"self" : {
+								"href" : ""
+							}
+						},
+						"id" : 1,
+						"name" : "Lamborghini Aventador",
+						"price" : 600000,
+						"description" : "Fantasy Car",
+						"img" : "lamborghini.jpg"
+					}
+				]
+			}
+		},
+		{
+			"_links" : {
+				"self" : {
+					"href" : ""
+				}
+			},
+			"id" : 2,
+			"name" : "motor",
+			"description" : "Motor City",
+			"_embedded" : {
+				"products" : [
+					{
+						"_links" : {
+							"self" : {
+								"href" : ""
+							}
+						},
+						"id" : 2,
+						"name" : "Honda CBR 150",
+						"price" : 5000,
+						"description" : "Sport City",
+						"img" : "cbr150.jpg"
+					},
+					{
+						"_links" : {
+							"self" : {
+								"href" : ""
+							}
+						},
+						"id" : 2,
+						"name" : "Honda CBR 150",
+						"price" : 5000,
+						"description" : "Sport City",
+						"img" : "cbr150.jpg"
+					},
+					{
+						"_links" : {
+							"self" : {
+								"href" : ""
+							}
+						},
+						"id" : 2,
+						"name" : "Honda CBR 150",
+						"price" : 5000,
+						"description" : "Sport City",
+						"img" : "cbr150.jpg"
+					},
+					{
+						"_links" : {
+							"self" : {
+								"href" : ""
+							}
+						},
+						"id" : 2,
+						"name" : "Honda CBR 150",
+						"price" : 5000,
+						"description" : "Sport City",
+						"img" : "cbr150.jpg"
+					},
+					{
+						"_links" : {
+							"self" : {
+								"href" : ""
+							}
+						},
+						"id" : 2,
+						"name" : "Honda CBR 150",
+						"price" : 5000,
+						"description" : "Sport City",
+						"img" : "cbr150.jpg"
+					},
+					{
+						"_links" : {
+							"self" : {
+								"href" : ""
+							}
+						},
+						"id" : 2,
+						"name" : "Honda CBR 150",
+						"price" : 5000,
+						"description" : "Sport City",
+						"img" : "cbr150.jpg"
+					}
+				]
+			}
+		},
+		{
+			"_links" : {
+				"self" : {
+					"href" : ""
+				}
+			},
+			"id" : 3,
+			"name" : "candy",
+			"description" : "Candy Rush",
+			"_embedded" : {
+				"products" : [
+					{
+						"_links" : {
+							"self" : {
+								"href" : ""
+							}
+						},
+						"id" : 3,
+						"name" : "Jelly Bean",
+						"price" : 1,
+						"description" : "Yummy",
+						"img" : "jellybean.jpg"
+					},
+					{
+						"_links" : {
+							"self" : {
+								"href" : ""
+							}
+						},
+						"id" : 3,
+						"name" : "Jelly Bean",
+						"price" : 1,
+						"description" : "Yummy",
+						"img" : "jellybean.jpg"
+					},
+					{
+						"_links" : {
+							"self" : {
+								"href" : ""
+							}
+						},
+						"id" : 3,
+						"name" : "Jelly Bean",
+						"price" : 1,
+						"description" : "Yummy",
+						"img" : "jellybean.jpg"
+					},
+					{
+						"_links" : {
+							"self" : {
+								"href" : ""
+							}
+						},
+						"id" : 3,
+						"name" : "Jelly Bean",
+						"price" : 1,
+						"description" : "Yummy",
+						"img" : "jellybean.jpg"
+					},
+					{
+						"_links" : {
+							"self" : {
+								"href" : ""
+							}
+						},
+						"id" : 3,
+						"name" : "Jelly Bean",
+						"price" : 1,
+						"description" : "Yummy",
+						"img" : "jellybean.jpg"
+					},
+					{
+						"_links" : {
+							"self" : {
+								"href" : ""
+							}
+						},
+						"id" : 3,
+						"name" : "Jelly Bean",
+						"price" : 1,
+						"description" : "Yummy",
+						"img" : "jellybean.jpg"
+					}
+				]
+			}
+		}
+	]
+}
