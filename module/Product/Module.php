@@ -8,6 +8,7 @@ use Product\Model\Product;
 use Zend\Db\TableGateway\TableGateway;
 use Product\Model\ProductCategoryTable;
 use Product\Model\ProductCategory;
+use Zend\Db\Sql\Select;
 class Module {
 	public function getAutoloaderConfig() {
 		return array (
