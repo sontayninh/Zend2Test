@@ -8,22 +8,42 @@ use Zend\View\Helper\ViewModel;
 
 class ProductRestController extends AbstractRestfulController {
 	protected $productTable;
+	protected $productCategoryTable;
 	public function getList() {
 		// code...
-		$results = $this->getproductTable()->fetchAll();
+		/*$results = $this->getproductTable()->fetchAll();
 // 		var_dump($results);
 		$data = array();
 		foreach ($results as $result){
 			$data[] = $result;
 		}
 // 		var_dump($data);exit();
-		return new JsonModel($data);
+		return new JsonModel(array('category'=>$data));*/
+		
+		$categories=$this->getproductCategoryTable()->fetchAll();
+		$category=array('categories'=>array());
+		foreach ($categories as $cat){
+			$id_cat = $cat->id;
+			$products = $this->getproductTable()->fetchProductByCaterogy($id_cat);
+			$pro = array();
+			foreach ($products as $product)
+			{
+				$pro[]=$product;
+			}
+			$cat = (array)$cat;
+			$cat['products'] = $pro;
+			//$cat = (object)$cat;
+			$category['categories'][]=$cat;
+		}
+		return new JsonModel($category);
+		
 	}
 	public function get($id) {
 		// code...
 		$product = $this->getProductTable()->getProduct($id);
 // 		var_dump($product); exit();
-		return new JsonModel(array('data'=>$product));
+		
+		return new JsonModel(array($product));
 	}
 	public function create($data) {
 		// code...
@@ -41,5 +61,13 @@ class ProductRestController extends AbstractRestfulController {
 			$this->productTable = $sm->get('Product\Model\ProductTable');
 		}
 		return $this->productTable;
+	}
+	
+	public function getproductCategoryTable(){
+		if(!$this->productCategoryTable){
+			$sm = $this->getServiceLocator();
+			$this->productCategoryTable = $sm->get('Product\Model\ProductCategoryTable');
+		}
+		return $this->productCategoryTable;
 	}
 } 
