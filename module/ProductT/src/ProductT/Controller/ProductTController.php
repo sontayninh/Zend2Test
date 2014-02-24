@@ -44,9 +44,9 @@ class ProductTController extends AbstractActionController {
 			$table = $this->params ()->fromQuery ( 'table', 'get' );
 		}
 		if ($table == 'category') {
-			$client->setUri ( 'http://localhost:80' . $this->getRequest ()->getBaseUrl () . '/category' );
+			$client->setUri ( 'http://localhost:8088' . $this->getRequest ()->getBaseUrl () . '/category' );
 		} elseif ($table == 'product') {
-			$client->setUri ( 'http://localhost:80' . $this->getRequest ()->getBaseUrl () . '/product' );
+			$client->setUri ( 'http://localhost:8088' . $this->getRequest ()->getBaseUrl () . '/product' );
 		}
 		// var_dump( $table);
 		// var_dump( $method);
