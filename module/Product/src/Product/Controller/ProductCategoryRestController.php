@@ -11,12 +11,10 @@ class ProductCategoryRestController extends AbstractRestfulController {
 	public function getList() {
 		// code...
 		$results = $this->getproductCategoryTable()->fetchAll();
-// 		var_dump($results);
 		$data = array();
 		foreach ($results as $result){
 			$data[] = $result;
 		}
-// 		var_dump($data);exit();
 		return new JsonModel($data);
 	}
 	public function get($id) {

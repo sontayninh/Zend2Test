@@ -11,6 +11,7 @@ class ProductTable {
 	}
 	public function fetchAll() {
 		$resultSet = $this->tableGateway->select ();
+// 		var_dump($resultSet);exit();
 		return $resultSet;
 	}
 	public function getProduct($id) {
